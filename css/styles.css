@@ -17,39 +17,31 @@
 }
 body {
     font-family: "Roboto", sans-serif;
-    color: var (--brand-color-black);
+    color: var(--brand-color-black);
 }
 .container {
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     justify-content: center;
 }
 ul {
     list-style-type: none;
 }
-.header-container {
-    margin: 0 -215px;
-}
+
 .header-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0px 215px;
     border-bottom: 1px solid #ececec;
 }
-.menu-list {
+.nav-list {
     display: flex;
     width: 254px;
     justify-content: space-between;
     margin-top: 32px;
     margin-bottom: 32px;
     margin-right: 371px;
-}
-.logo-style {
-    font-size: 26px;
-}
-.logo-color {
-    color: var(--brand-color-blue);
-    font-size: 26px;
 }
 
 .logo-header {
@@ -63,6 +55,13 @@ ul {
     margin-top: 24px;
     margin-bottom: 25px;
     margin-right: 93px;
+}
+.logo-style {
+    font-size: 26px;
+}
+.logo-color {
+    color: var(--brand-color-blue);
+    font-size: 26px;
 }
 .pointer {
     cursor: pointer;
@@ -105,7 +104,6 @@ ul {
 .main-board {
     display: flex;
     flex-direction: column;
-    width: 1600px;
     background-color: var(--brand-color-dark);
     align-items: center;
     text-align: center;
@@ -146,9 +144,9 @@ ul {
 }
 .article-list {
     display: flex;
-    justify-content: space-between;
-    max-width: 1600px;
-    margin: 94px 0px 0px 0px; /*tu*/
+    justify-content: center;
+    gap: 30px;
+    margin: 94px 0px;
 }
 .article-items {
     width: 270px;
@@ -169,19 +167,28 @@ ul {
     color: var(--brand-color-grey);
 }
 
-.section-title {
+.section-title-what {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-bottom: 50px;
+}
+.photo-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 94px;
+}
+
+.section-title-who {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
     padding-top: 94px;
-}
-.photo-links {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 15px 94px 15px; /*tu*/
-    width: 1170px;
 }
 .person-name {
     font-weight: 500;
@@ -199,21 +206,22 @@ ul {
     letter-spacing: 0.03em;
     color: var(--brand-color-grey);
 }
+
 .team-container {
-    margin-left: -215px;
-}
-.team-section {
-    width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: var(--brand-color-lightgrey);
     padding-bottom: 94px;
 }
 .team {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    max-width: 1170px;
-    margin: 50px 0px 0px 215px; /*tu*/
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
 }
+
 .team-item {
     display: flex;
     flex-direction: column;
@@ -228,18 +236,15 @@ ul {
     border-radius: 0px 0px 4px 4px;
 }
 .footer-container {
-    width: 1600px;
     display: flex;
-    flex-direction: column;
-
-    justify-items: center;
-    margin-left: -215px;
+    justify-content: center;
+    padding: 60px 0;
+    background-color: var(--brand-color-dark);
 }
 .footer-section {
     display: flex;
     flex-direction: column;
-    padding: 60px 215px;
-    background-color: var(--brand-color-dark);
+    width: 1200px;
 }
 .logo-footer {
     font-family: "Raleway";
@@ -285,10 +290,8 @@ portolio.html
 .portfolio-filter {
     display: flex;
     flex-direction: row;
-    width: 572px;
-    align-content: center;
+    justify-content: center;
     margin-top: 94px;
-    margin-left: 295px;
     gap: 8px;
 }
 
@@ -330,10 +333,8 @@ portolio.html
     border-radius: 4px;
 }
 
-.wrapper {
+.projects {
     display: flex;
-    flex-wrap: wrap;
-    width: 1200px;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 94px;
@@ -341,6 +342,8 @@ portolio.html
 .card-set {
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 1200px;
+    justify-content: center;
     gap: 30px;
     list-style: none;
 }
